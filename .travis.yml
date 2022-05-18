@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t 120784/react-test -f ./client/Dockerfile.dev ./client/.
+  - docker build -t 120784/react-test -f ./client/Dockerfile.dev ./client/
 script:
   - docker run -e CI=true 120784/react-test npm test
 after_success:
